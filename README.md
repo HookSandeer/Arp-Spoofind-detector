@@ -14,22 +14,23 @@ A simple ARP spoofing (Man-in-the-Middle attack) detector written in Python 3 fo
 
 ## How to Use
 
-1. **Install `msmtp`** and the required Python modules:
+1. **Install `msmtp` and the required Python modules:**
    ```bash
    sudo apt install msmtp
    pip3 install scapy
-    Configure msmtp so the script can send alert emails.
+   ```
+2. **Configure `msmtp` so the script can send alert emails.**
 
     Edit the script:
     Replace the value of the iface variable with the name of your network interface.
 
-    Configure your network interface:
+3. **Configure your network interface:**
 
         Set it to link-only mode (no IP address).
 
         Configure port mirroring on your switch so that all traffic is copied to this interface.
 
-Notes
+## Notes
 
     This script is intended for use in a monitored or lab environment.
 
