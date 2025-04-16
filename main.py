@@ -70,4 +70,6 @@ def arp_spoof_detection(pkt):
 
 # Lancement du sniff en continu
 print("👀 Surveillance du réseau en cours (Ctrl+C pour quitter)...")
+
+# Remplacez "enxf8e43b1ca672" par le nom de votre interface réseau
 sniff(iface="enxf8e43b1ca672", filter="arp", store=False, prn=arp_spoof_detection)
